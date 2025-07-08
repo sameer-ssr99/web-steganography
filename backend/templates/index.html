@@ -1,0 +1,25 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Steganography Web Tool</title>
+</head>
+<body>
+  <h2>Select Mode and Media Type</h2>
+  <form method="POST" action="/select">
+    <label>Choose Operation:</label><br>
+    <input type="radio" name="mode" value="encode" checked> Encode<br>
+    <input type="radio" name="mode" value="decode"> Decode<br><br>
+
+    <label>Choose Media Type:</label><br>
+    <select name="media" required>
+      <option value="image">Image</option>
+      <option value="audio">Audio</option>
+      <option value="video">Video</option>
+      <option value="text">Text</option>
+    </select><br><br>
+
+    <input type="submit" value="Continue">
+  </form>
+</body>
+</html>

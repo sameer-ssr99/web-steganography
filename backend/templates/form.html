@@ -1,0 +1,25 @@
+<!-- templates/form.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Upload Media</title>
+</head>
+<body>
+  <h2>{{ mode.capitalize() }} {{ media.capitalize() }}</h2>
+
+  <form action="/process" method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="mode" value="{{ mode }}">
+    <input type="hidden" name="media" value="{{ media }}">
+
+    <label>Select File:</label>
+    <input type="file" name="file" required><br><br>
+
+    {% if mode == 'encode' %}
+    <label>Enter Secret Message:</label><br>
+    <textarea name="message" rows="4" cols="50" required></textarea><br><br>
+    {% endif %}
+
+    <input type="submit" value="{{ mode.capitalize() }}">
+  </form>
+</body>
+</html>

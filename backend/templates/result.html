@@ -1,0 +1,20 @@
+<!-- templates/result.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Decoded Message</title>
+</head>
+<body>
+    <h2>✅ Decoded Message</h2>
+    
+    {% if message %}
+        <pre style="font-size:18px; color:green">{{ message }}</pre>
+    {% else %}
+        <p style="color:red;">No message was decoded or it was empty.</p>
+    {% endif %}
+
+    <br><br>
+    <a href="/">Back to Home</a>
+</body>
+</html>

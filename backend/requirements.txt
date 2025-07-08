@@ -1,0 +1,8 @@
+flask
+pillow
+opencv-python
+numpy
+stegano
+pydub
+uuid
+
